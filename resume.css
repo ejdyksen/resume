@@ -1,0 +1,126 @@
+#resume {
+	font-family: 'Garamond', 'Adobe Garamond Pro', serif;
+}
+
+#resume p {
+	margin-top: 0.5em;
+	margin-right: 1em;
+	line-height: 1.2em;
+}
+
+#resume ul {
+	margin-top: 0.5em;
+	margin-right: 1em;
+	margin-left: 1em;
+	text-indent: -0.7em;
+}
+
+#resume li {
+	list-style: none;
+	margin-top: 0.35em;
+}
+
+#resume ul li:before {
+	content: "\00BB \0020";
+}
+
+/* Header */
+#resume > header {
+	padding-bottom: 1em;
+	border-bottom: 1px solid #ccc;
+}
+
+#resume > header aside {
+	float: right;
+	text-align: right;
+	font-size: 1.15em;
+	line-height: 1.35em;
+}
+
+/* Section spacing and borders */
+#resume section {
+	margin-top: 1em;
+	padding-bottom: 0.75em;
+	border-bottom: 1px solid #ccc;
+}
+#resume section:last-of-type { border-bottom: none; }
+
+#resume section header { margin-bottom: 0.75em; }
+
+#resume section header time { float: right; }
+
+#resume > section > p { padding-top: 0.2em; }
+
+#resume h1 {
+	font-weight: normal;
+	font-size: 3.25em;
+	letter-spacing: 0.035em;
+}
+
+#resume h2, #resume h3, #resume h4, #resume h5 {
+	font-weight: normal;
+}
+
+
+
+#resume h2 {
+	font-size: 2em;
+	font-style: italic;
+}
+
+#resume h3 {
+	font-size: 1.425em;
+	}
+
+#resume h4 {
+	font-size: 1.2em;
+	
+}	
+
+/* Stuff for left float of headers */
+#resume > section > h2 ~ * {
+	/* pushes out everybody from the side headers */
+	margin-left: 10.5em;
+}
+
+/* selects all side headers */
+#resume > section > h2 {
+	
+	width: 7em;
+	float: left;
+	
+	font-size: 1.375em;
+	text-transform: uppercase;
+	line-height: 1em;
+	font-style: normal;
+}
+
+#resume > section > h2::first-letter {
+	font-size: 1.25em;
+	text-transform: uppercase;
+}
+
+@media screen {
+	#resume {
+		font-size: 16px;
+		background-color: #eee;
+		color: #333;
+		margin: 15px auto;
+		width: 800px;
+		padding: 1.75em;
+	}
+}
+
+@media print {
+	body, #resume {
+		font-size: 10pt;
+		margin: 0.5em;
+		background-color: white;
+		color: black;
+	}
+	
+	#resume a {
+		color: black;
+		text-decoration: none;
+	}
+}
