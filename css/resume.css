@@ -47,7 +47,10 @@
 
 #resume section header { margin-bottom: 0.75em; }
 
-#resume section header time { float: right; }
+#resume section header time {
+  float: right;
+  text-align: right;
+}
 
 #resume > section > p { padding-top: 0.2em; }
 
