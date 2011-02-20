@@ -3,13 +3,11 @@
 }
 
 #resume p {
-  margin-top: 0.5em;
-  margin-right: 1em;
   line-height: 1.2em;
 }
 
 #resume ul {
-  margin-to  p: 0.5em;
+  margin-top: 0.25em;
   margin-right: 1em;
   margin-left: 1em;
   text-indent: -0.7em;
@@ -25,9 +23,9 @@
   content: "\00BB \0020";
 }
 
-/* Header */
+/* Main header */
 #resume > header {
-  padding-bottom: 1em;
+  padding-bottom: 0.75em;
   border-bottom: 1px solid #ccc;
 }
 
@@ -35,53 +33,46 @@
   float: right;
   text-align: right;
   font-size: 1.15em;
-  line-height: 1.35em;
+  line-height: 1.4em;
 }
 
 /* Section spacing and borders */
 #resume section {
   margin-top: 1em;
-  padding-bottom: 0.75em;
+  padding-bottom: 1em;
   border-bottom: 1px solid #ccc;
 }
-#resume section:last-of-type { border-bottom: none; }
+#resume section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0em;
+}
 
-#resume section header { margin-bottom: 0.75em; }
+/* Subheaders */
+#resume section header {
+  margin-bottom: 0.5em;
+}
 
 #resume section header time {
   float: right;
   text-align: right;
 } 
-
-#resume > section > p { padding-top: 0.2em; }
+#resume h1, #resume h2, #resume h3, #resume h4, #resume h5 {
+  font-weight: normal;
+}
 
 #resume h1 {
-  font-weight: normal;
   font-size: 3.25em;
   letter-spacing: 0.035em;
 }
 
-#resume h2, #resume h3, #resume h4, #resume h5 {
-  font-weight: normal;
-}
-
-#resume h2 {
-  font-size: 2em;
-  font-style: italic;
-}
-
 #resume h3 {
   font-size: 1.425em;
+  line-height: 0.9em;
+  margin-bottom: 0.2em;
 }
 
 #resume h4 {
   font-size: 1.2em;
-}
-
-#resume footer {
-  font-size: 0.75em;
-  margin-top: 2em;
-  text-align: center;
 }
 
 /* Stuff for left float of headers */
@@ -90,12 +81,10 @@
   margin-left: 10.5em;
 }
 
-/* selects all side headers */
+/* selects all left side headers */
 #resume > section > h2 {
-
   width: 7em;
   float: left;
-
   font-size: 1.375em;
   text-transform: uppercase;
   line-height: 1em;
@@ -105,6 +94,17 @@
 #resume > section > h2::first-letter {
   font-size: 1.25em;
   text-transform: uppercase;
+}
+
+#resume footer {
+  margin-top: 2em;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+#resume footer p {
+  margin-top: 0em;
+  line-height: 1.75em;
 }
 
 @media screen {
@@ -118,7 +118,7 @@
     color: #333;
     width: 8.5in;
     margin: 30px auto;
-    padding: 3em 4em 2em;
+    padding: 3.25em 4em 2em;
     
     border-radius:0.35em;
     -moz-border-radius:0.35em;
