@@ -1,5 +1,16 @@
+@font-face {
+    font-family: 'CallunaRegular';
+    src: url('../fonts/calluna/calluna-regular-webfont.eot?') format('eot'),
+         url('../fonts/calluna/calluna-regular-webfont.woff') format('woff'),
+         url('../fonts/calluna/calluna-regular-webfont.ttf') format('truetype'),
+         url('../fonts/calluna/calluna-regular-webfont.svg#webfontjyx0sIUG') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 #resume {
-	font-family: 'Adobe Garamond Pro', 'Garamond', serif;
+	font-family: 'CallunaRegular', 'Garmond', serif;
 }
 
 #resume p {
