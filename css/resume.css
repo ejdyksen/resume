@@ -10,7 +10,7 @@
 }
 
 #resume {
-	font-family: 'CallunaRegular', 'Garmond', serif;
+	font-family: 'Georgia', serif;
 }
 
 #resume p {
@@ -22,7 +22,7 @@
   margin-top: 0.25em;
   margin-right: 1em;
   margin-left: 1em;
-  text-indent: -0.7em;
+  text-indent: -1em;
 }
 
 #resume li {
@@ -69,22 +69,23 @@
   text-align: right;
 } 
 #resume h1, #resume h2, #resume h3, #resume h4, #resume h5 {
+  font-family: 'CallunaRegular', 'Georgia', serif;
   font-weight: normal;
 }
 
 #resume h1 {
-  font-size: 3.25em;
+  font-size: 3.5em;
   letter-spacing: 0.035em;
 }
 
 #resume h3 {
-  font-size: 1.425em;
+  font-size: 1.3em;
   line-height: 0.9em;
   margin-bottom: 0.2em;
 }
 
 #resume h4 {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 /* Stuff for left float of headers */
@@ -97,7 +98,7 @@
 #resume > section > h2 {
   width: 7em;
   float: left;
-  font-size: 1.375em;
+  font-size: 1.2em;
   text-transform: uppercase;
   line-height: 1em;
   font-style: normal;
@@ -121,7 +122,7 @@
   
   #resume {
     background-color: white;
-    font-size: 16px;
+    font-size: 15px;
     color: #333;
     width: 8.5in;
     margin: 30px auto;
