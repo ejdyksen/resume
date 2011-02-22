@@ -61,7 +61,7 @@
 
 /* Subheaders */
 #resume section header {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.65em;
 }
 
 #resume section header aside {
@@ -124,7 +124,7 @@
     background-color: white;
     font-size: 15px;
     color: #333;
-    width: 8.5in;
+    width: 8.25in;
     margin: 30px auto;
     padding: 3.25em 4em 2em;
     
