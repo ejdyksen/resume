@@ -44,6 +44,7 @@
   padding-bottom: 1em;
   border-bottom: 1px solid #ccc;
 }
+
 #resume section:last-of-type {
   border-bottom: none;
   padding-bottom: 0em;
@@ -58,7 +59,6 @@
   float: right;
   text-align: right;
 }
-
 
 #resume h3 {
   font-size: 18px;
@@ -110,16 +110,17 @@
     background-color: #fff;
     font-size: 13px;
     color: #333;
-    width: 8.25in;
+    width: 8.3in;
     margin: 30px auto;
     padding: 3.25em 4em 2em;
     
-    border-radius:0.35em;
-    -moz-border-radius:0.35em;
+            border-radius:0.35em;
+    -webkit-border-radius:0.35em;
+       -moz-border-radius:0.35em;
     
-    box-shadow:0 1px 7px rgba(0, 0, 0, 0.3);
+            box-shadow:0 1px 7px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow:0 1px 7px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow:0 1px 7px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow:0 1px 7px rgba(0, 0, 0, 0.3);
   }
 }
 
