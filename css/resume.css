@@ -1,41 +1,31 @@
-@font-face {
-    font-family: 'CallunaRegular';
-    src: url('../fonts/calluna/calluna-regular-webfont.eot?') format('eot'),
-         url('../fonts/calluna/calluna-regular-webfont.woff') format('woff'),
-         url('../fonts/calluna/calluna-regular-webfont.ttf') format('truetype'),
-         url('../fonts/calluna/calluna-regular-webfont.svg#webfontjyx0sIUG') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 #resume {
-	font-family: 'Georgia', serif;
+  font-family: sans-serif;
+  font-weight: 300;
 }
 
 #resume p {
-  margin-top: 1em;
-  line-height: 1.2em;
+  margin-top: 0.6em;
+  line-height: 1.25em;
 }
 
 #resume ul {
   margin-top: 0.25em;
-  margin-right: 1em;
-  margin-left: 1em;
-  text-indent: -1em;
+  margin-left: 1.5em;
 }
 
 #resume li {
-  list-style: none;
-  margin-top: 0.35em;
+  list-style: circle;
+  margin-top: 0.5em;
   line-height: 1.25em;
 }
 
-#resume ul li:before {
-  content: "\00BB \0020";
+/* Main header */
+#resume h1 {
+  font-family: 'RalewayThin', 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  font-size: 48px;
 }
 
-/* Main header */
 #resume > header {
   padding-bottom: 0.75em;
   border-bottom: 1px solid #ccc;
@@ -44,7 +34,7 @@
 #resume > header aside {
   float: right;
   text-align: right;
-  font-size: 1.15em;
+  font-size: 15px;
   line-height: 1.4em;
 }
 
@@ -67,25 +57,20 @@
 #resume section header aside {
   float: right;
   text-align: right;
-} 
-#resume h1, #resume h2, #resume h3, #resume h4, #resume h5 {
-  font-family: 'CallunaRegular', 'Georgia', serif;
-  font-weight: normal;
 }
 
-#resume h1 {
-  font-size: 3.5em;
-  letter-spacing: 0.035em;
-}
 
 #resume h3 {
-  font-size: 1.3em;
+  font-size: 18px;
+  font-weight: 200;
   line-height: 0.9em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.4em;
 }
 
 #resume h4 {
-  font-size: 1em;
+  font-size: 12px;
+  font-weight: 200;
+  font-style: italic;
 }
 
 /* Stuff for left float of headers */
@@ -98,14 +83,15 @@
 #resume > section > h2 {
   width: 7em;
   float: left;
-  font-size: 1.2em;
+  font-size: 17px;
+  font-weight: 100;
   text-transform: uppercase;
   line-height: 1em;
   font-style: normal;
 }
 
 #resume > section > h2::first-letter {
-  font-size: 1.25em;
+  font-size: 1.2em;
   text-transform: uppercase;
 }
 
@@ -117,12 +103,12 @@
 
 @media screen {
   body {
-    background-color: #929292;
+    background-color: #999;
   }
   
   #resume {
-    background-color: white;
-    font-size: 15px;
+    background-color: #fff;
+    font-size: 13px;
     color: #333;
     width: 8.25in;
     margin: 30px auto;
@@ -150,4 +136,13 @@
     background-color: white;
     color: black;
   }
+}
+
+@font-face {
+    font-family: 'RalewayThin';
+    src: url('../fonts/raleway/raleway_thin-webfont.eot');
+    src: url('../fonts/raleway/raleway_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway/raleway_thin-webfont.woff') format('woff'),
+         url('../fonts/raleway/raleway_thin-webfont.ttf') format('truetype'),
+         url('../fonts/raleway/raleway_thin-webfont.svg#RalewayThin') format('svg');
 }
