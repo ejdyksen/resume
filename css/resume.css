@@ -5,7 +5,7 @@
 
 #resume p {
   margin-top: 0.6em;
-  line-height: 1.25em;
+  line-height: 1.35em;
 }
 
 #resume ul {
@@ -16,7 +16,7 @@
 #resume li {
   list-style: circle;
   margin-top: 0.5em;
-  line-height: 1.25em;
+  line-height: 1.35em;
 }
 
 /* Main header */
