@@ -21,7 +21,7 @@
 
 /* Main header */
 #resume h1 {
-  font-family: 'RalewayThin', 'Helvetica Neue', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 100;
   font-size: 48px;
 }
@@ -137,13 +137,4 @@
     background-color: white;
     color: black;
   }
-}
-
-@font-face {
-    font-family: 'RalewayThin';
-    src: url('../fonts/raleway/raleway_thin-webfont.eot');
-    src: url('../fonts/raleway/raleway_thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway/raleway_thin-webfont.woff') format('woff'),
-         url('../fonts/raleway/raleway_thin-webfont.ttf') format('truetype'),
-         url('../fonts/raleway/raleway_thin-webfont.svg#RalewayThin') format('svg');
 }
