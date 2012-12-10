@@ -39,7 +39,7 @@ body
   border-bottom: 1px solid #ccc;
 }
 
-#resume > header aside {
+#resume > header > div {
   float: right;
   text-align: right;
   font-size: 15px;
@@ -63,7 +63,7 @@ body
   margin-bottom: 0.65em;
 }
 
-#resume section header aside {
+#resume section header > div {
   float: right;
   text-align: right;
 }
