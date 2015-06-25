@@ -7,8 +7,7 @@ body
 {line-height:1;}
 
 #resume {
-  font-family: sans-serif;
-  font-weight: 300;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 #resume p {
@@ -29,9 +28,8 @@ body
 
 /* Main header */
 #resume h1 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 200;
-  font-size: 48px;
+  font-family: "Raleway", sans-serif;
+  font-size: 3.7em;
 }
 
 #resume > header {
@@ -43,7 +41,7 @@ body
   float: right;
   text-align: right;
   font-size: 15px;
-  line-height: 1.4em;
+  line-height: 1.5em;
 }
 
 /* Section spacing and borders */
@@ -69,39 +67,36 @@ body
 }
 
 #resume h3 {
-  font-size: 19px;
+  font-size: 1.5em;
   font-weight: 200;
-  line-height: 0.9em;
+  line-height: 1em;
   margin-bottom: 0.25em;
 }
 
 #resume h4 {
-  font-size: 14px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-style: italic;
+}
+
+#resume > section > section {
+  page-break-inside: avoid;
 }
 
 /* Stuff for left float of headers */
 #resume > section > h2 ~ * {
   /* pushes out everybody from the side headers */
-  margin-left: 10.5em;
+  margin-left: 10em;
 }
 
 /* selects all left side headers */
 #resume > section > h2 {
   width: 7em;
   float: left;
-  font-size: 17px;
-  font-weight: 100;
+  font-size: 1.25em;
+  font-weight: 200;
   text-transform: uppercase;
   line-height: 1em;
   font-style: normal;
-}
-
-#resume > section > h2::first-letter {
-  font-size: 1.2em;
-  text-transform: uppercase;
 }
 
 #resume footer {
@@ -114,11 +109,11 @@ body
   body {
     background-color: #999;
   }
-  
+
   #resume {
     background-color: #fff;
     font-size: 13px;
-    color: #333;
+    color: #222;
     width: 8.0in;
     margin: 30px auto;
     padding: 3.25em 4em 2em;
@@ -129,8 +124,9 @@ body
 
 @media print {
   #resume {
-    margin: 0.25in 0.35in 0.35in 0.25in;
-    font-size: 9pt;
+    margin: 0.3in 0.4in 0.3in 0.25in;
+    /*margin: 0;*/
+    font-size: 8pt;
     background-color: white;
     color: black;
   }
