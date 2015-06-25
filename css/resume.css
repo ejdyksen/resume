@@ -7,7 +7,7 @@ body
 {line-height:1;}
 
 #resume {
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 #resume p {
@@ -29,6 +29,7 @@ body
 /* Main header */
 #resume h1 {
   font-family: "Raleway", sans-serif;
+  font-weight: 200;
   font-size: 3.7em;
 }
 
@@ -68,13 +69,13 @@ body
 
 #resume h3 {
   font-size: 1.5em;
-  font-weight: 200;
+  font-weight: normal;
   line-height: 1em;
   margin-bottom: 0.25em;
 }
 
 #resume h4 {
-  font-weight: 200;
+  font-weight: normal;
   font-style: italic;
 }
 
@@ -93,14 +94,15 @@ body
   width: 7em;
   float: left;
   font-size: 1.25em;
-  font-weight: 200;
+  font-weight: normal;
+  color: #555;
   text-transform: uppercase;
   line-height: 1em;
   font-style: normal;
 }
 
 #resume footer {
-  margin-top: 1.5em;
+  margin-top: 5em;
   font-size: 11px;
   text-align: center;
 }
@@ -113,7 +115,6 @@ body
   #resume {
     background-color: #fff;
     font-size: 13px;
-    color: #222;
     width: 8.0in;
     margin: 30px auto;
     padding: 3.25em 4em 2em;
@@ -124,10 +125,8 @@ body
 
 @media print {
   #resume {
-    margin: 0.3in 0.4in 0.3in 0.25in;
-    /*margin: 0;*/
-    font-size: 8pt;
+    margin: 0.3in 0.4in 0.5in 0.25in;
+    font-size: 8.5pt;
     background-color: white;
-    color: black;
   }
 }
