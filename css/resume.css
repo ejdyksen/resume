@@ -79,9 +79,11 @@ body
   font-style: italic;
 }
 
+/*
 #resume > section > section {
   page-break-inside: avoid;
 }
+*/
 
 /* Stuff for left float of headers */
 #resume > section > h2 ~ * {
@@ -117,7 +119,7 @@ body
     font-size: 13px;
     width: 8.0in;
     margin: 30px auto;
-    padding: 3.25em 4em 2em;
+    padding: 3em 4em 2em;
     border-radius:0.35em;
     box-shadow:0 1px 7px rgba(0, 0, 0, 0.3);
   }
@@ -125,7 +127,7 @@ body
 
 @media print {
   #resume {
-    margin: 0.3in 0.4in 0.5in 0.25in;
+    margin: 0.25in 0.3in 0.2in 0.25in;
     font-size: 8.5pt;
     background-color: white;
   }
