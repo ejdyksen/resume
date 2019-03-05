@@ -79,11 +79,9 @@ body
   font-style: italic;
 }
 
-/*
 #resume > section > section {
   page-break-inside: avoid;
 }
-*/
 
 /* Stuff for left float of headers */
 #resume > section > h2 ~ * {
