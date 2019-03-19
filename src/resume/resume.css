@@ -10,6 +10,10 @@ body
   font-family: "Arial", sans-serif;
 }
 
+#resume .deprecated {
+  display: none;
+}
+
 #resume p {
   margin-top: 0.6em;
   line-height: 1.35em;
@@ -52,7 +56,8 @@ body
   border-bottom: 1px solid #ccc;
 }
 
-#resume section:last-of-type {
+#resume section:last-of-type,
+#resume section.last {
   border-bottom: none;
   padding-bottom: 0em;
 }
@@ -79,7 +84,7 @@ body
   font-style: italic;
 }
 
-#resume > section > section {
+#resume li {
   page-break-inside: avoid;
 }
 
@@ -125,8 +130,8 @@ body
 
 @media print {
   #resume {
-    margin: 0.25in 0.3in 0.2in 0.25in;
-    font-size: 8.5pt;
+    margin: 0.5in 0.75in 0.5in 0.5in;
+    font-size: 8pt;
     background-color: white;
   }
 }
