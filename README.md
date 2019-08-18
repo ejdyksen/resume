@@ -1,5 +1,5 @@
-This is my personal website.
+# E.J. Dyksen - Resume
 
-Note to self: this is the *current* version. You have other experiments going on elsewhere, but this is what you have now.
+This is the source of my resume online (and in PDF form).
 
-Install [live-server](http://tapiov.net/live-server/) to develop.
+Currently, this is kept as a private repo because my cell phone # is in here. Maybe someday I'll fix that.
