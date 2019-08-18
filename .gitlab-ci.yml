@@ -34,7 +34,7 @@ deploy_review:
   dependencies:
   - build_review
   script:
-  - aws s3 sync public/ s3://staging.ejdyksen.com/$CI_ENVIRONMENT_SLUG/ --delete --acl public-read 
+  - aws s3 sync public/ s3://staging.ejdyksen.com/$CI_ENVIRONMENT_SLUG/ --delete --acl public-read
 
 stop_review:
   stage: deploy
@@ -55,13 +55,13 @@ stop_review:
 
 build_production:
   stage: build
-  tags: 
+  tags:
   - linux
   only:
   - master
   script:
   - cp -r src/ public/
-  - cat public/resume/resume.html | sed '/private-contact-1/I,+3 d' | sed '/private-contact-2/I,+4 d' > public/resume/index.html
+  - cat public/resume/resume.html | sed '/private-contact-1/I,+3 d' | sed '/private-contact-2/I,+4 d' | sed '/noindex/d' > public/resume/index.html
   artifacts:
     expire_in: 1 week
     paths:
@@ -76,4 +76,4 @@ deploy_production:
   dependencies:
   - build_production
   script:
-  - aws s3 sync public/ s3://www.ejdyksen.com/ --delete --acl public-read 
+  - aws s3 sync public/ s3://www.ejdyksen.com/ --delete --acl public-read
