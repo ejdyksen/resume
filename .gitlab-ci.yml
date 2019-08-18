@@ -1,10 +1,28 @@
-image: garland/aws-cli-docker
-
 stages:
+  - build
   - deploy
+
+build_production:
+  stage: build
+  tags: 
+  - linux
+  only:
+  - master
+  script:
+  - cp -r src/ public/
+  - cat public/resume/resume.html | sed '/private-contact-1/I,+3 d' | sed '/private-contact-2/I,+4 d' > public/resume/index.html
+  artifacts:
+    expire_in: 1 week
+    paths:
+    - public
 
 deploy_production:
   stage: deploy
-  environment: Production
+  image: garland/aws-cli-docker
+  environment: production
+  only:
+  - master
+  dependencies:
+  - build_production
   script:
-  - aws s3 sync src/ s3://www.ejdyksen.com/ --delete --acl public-read 
+  - aws s3 sync public/ s3://www.ejdyksen.com/ --delete --acl public-read 
