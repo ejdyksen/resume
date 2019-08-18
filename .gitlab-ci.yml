@@ -1,42 +1,10 @@
-image: google/cloud-sdk:alpine
+image: garland/aws-cli-docker
+
+stages:
+  - deploy
 
 deploy_production:
   stage: deploy
   environment: Production
-  only:
-  - master
   script:
-  - echo $SERVICE_ACCOUNT > /tmp/$CI_PIPELINE_ID.json
-  - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
-  - gsutil -m rsync -d -R src/ gs://www.ejdyksen.com
-
-deploy_review:
-  stage: deploy
-  environment:
-    name: review/$CI_COMMIT_REF_NAME
-    url: https://www.ejdyksen.com/$CI_ENVIRONMENT_SLUG/
-    on_stop: stop_review
-  only:
-  - branches
-  except:
-  - master
-  script:
-  - echo $SERVICE_ACCOUNT > /tmp/$CI_PIPELINE_ID.json
-  - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
-  - gsutil -m rsync -d -R src/ gs://www.ejdyksen.com/$CI_ENVIRONMENT_SLUG/
-
-stop_review:
-  stage: deploy
-  variables:
-    GIT_STRATEGY: none
-  when: manual
-  environment:
-    name: review/$CI_COMMIT_REF_NAME
-    action: stop
-  script:
-  - echo $SERVICE_ACCOUNT > /tmp/$CI_PIPELINE_ID.json
-  - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
-  - gsutil -m rm -r gs://www.ejdyksen.com/$CI_ENVIRONMENT_SLUG
-
-after_script:
-- rm /tmp/$CI_PIPELINE_ID.json
+  - aws s3 sync src/ s3://www.ejdyksen.com/ --delete --acl public-read 
