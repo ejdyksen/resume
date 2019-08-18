@@ -14,7 +14,7 @@ build_review:
   - master
   script:
   - cp -r src/ public/
-  - cat public/resume/resume.html | sed '/private-contact-1/I,+3 d' | sed '/private-contact-2/I,+4 d' > public/resume/index.html
+  - cat public/resume.html | sed '/private-contact-1/I,+3 d' | sed '/private-contact-2/I,+4 d' > public/index.html
   artifacts:
     expire_in: 1 day
     paths:
@@ -61,7 +61,7 @@ build_production:
   - master
   script:
   - cp -r src/ public/
-  - cat public/resume/resume.html | sed '/private-contact-1/I,+3 d' | sed '/private-contact-2/I,+4 d' | sed '/noindex/d' > public/resume/index.html
+  - cat public/resume.html | sed '/private-contact-1/I,+3 d' | sed '/private-contact-2/I,+4 d' | sed '/noindex/d' > public/index.html
   artifacts:
     expire_in: 1 week
     paths:
