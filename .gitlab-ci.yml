@@ -2,6 +2,57 @@ stages:
   - build
   - deploy
 
+build_review:
+  stage: build
+  tags:
+  - linux
+  environment:
+    name: review/$CI_COMMIT_REF_NAME
+  only:
+  - branches
+  except:
+  - master
+  script:
+  - cp -r src/ public/
+  - cat public/resume/resume.html | sed '/private-contact-1/I,+3 d' | sed '/private-contact-2/I,+4 d' > public/resume/index.html
+  artifacts:
+    expire_in: 1 day
+    paths:
+    - public
+
+deploy_review:
+  stage: deploy
+  image: garland/aws-cli-docker
+  environment:
+    name: review/$CI_COMMIT_REF_NAME
+    url: https://staging.ejdyksen.com/$CI_ENVIRONMENT_SLUG/
+    on_stop: stop_review
+  only:
+  - branches
+  except:
+  - master
+  dependencies:
+  - build_review
+  script:
+  - aws s3 sync public/ s3://staging.ejdyksen.com/$CI_ENVIRONMENT_SLUG/ --delete --acl public-read 
+
+stop_review:
+  stage: deploy
+  image: garland/aws-cli-docker
+  variables:
+    GIT_STRATEGY: none
+  environment:
+    name: review/$CI_COMMIT_REF_NAME
+    action: stop
+  only:
+  - branches
+  except:
+  - master
+  when: manual
+  script:
+  - aws s3 rm --recursive s3://staging.ejdyksen.com/$CI_ENVIRONMENT_SLUG
+
+
 build_production:
   stage: build
   tags: 
